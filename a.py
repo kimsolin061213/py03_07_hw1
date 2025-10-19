@@ -1,21 +1,17 @@
 # %%
-# 11번 input 사용, 숫자 5개 입력, 리스트로 형변환
-#input 사용, 문자 1개 입력, 위 리스트 끝에 추가
-# p.45 p.10
+
 a = list(map(int, input('숫자 5개 입력').split()))
 a.append(input('문자 1개 입력'))
 print(a)
 
 # %%
-# 12번 input 사용, 숫자 5개 입력, 리스트로 형변환 후 마지막 값 2개 삭제
-# p.16
+
 a = list(map(int, input('숫자 5개 입력').split()))
 del a[-2:]
 print(a)
 
 # %%
-# 13번 input 사용, 숫자 5개, enumerate 이용히여 101번 index부터 5개 값 출력
-# p.29
+
 a = list(map(int, input('숫자 5개 입력').split()))
 for index, nn in enumerate(a, start = 101):
   print(index, nn)
@@ -28,46 +24,38 @@ nn = a.count(20)
 print(nn)
 
 # %%
-# 15번 input 사용, 숫자 10개 입력, list 형변환 후 최저 최고 값
-# p.35
+
 a = list(map(int, input('숫자 10개 입력').split()))
 n = min(a)
 x = max(a)
 print(n, 'end', x)
 
 # %%
-# 16번 input 사용, 숫자 10개 입력, list 형변환 후 최저최고 제외 나머지 값의 합
-# p.34 p.36 슬라이스
+
 a = list(map(int, input('숫자 10개 입력').split()))
 a.sort()
 nn = sum(a[1:-1])
 print(nn)
 
 # %%
-#17번 a = [10, 20, 30, 40, 30, 20, 10] 리스트에서 20 모두 삭제
-# p.17 모두 지우려면 20이 있어? 물어봐야함
+
 a = [10, 20, 30, 40, 30, 20, 10]
 while 20 in a:
   a.remove(20)
 print(a)
 
 # %%
-# 18번 list comprehension 이용, 1부터 5까지 리스트 만들어 출력
-# p.37
+
 a = [i for i in range(1, 6)]
 print(a)
 
 # %%
-# 19번 list comprehension 이용, 1부터 20까지 중 홀수 출력
-# p.39
+
 a = [i for i in range(1, 21) if i % 2 != 0]
 print(a)
 
 # %%
-# 20번 표준입력input 정수 두 개 입력(첫번째 값 범위 1-20, 두번째 10-30, 첫번쨰가 더 작음)
-# 첫번째 정수부터 두번째까지를 지수로 하는 2의 거듭제곱 리스트 출력
-# 단 리스트 두번째와 뒤에서 두번째 요소는 삭제 후 출력, 출력은 리스트 형태
-# p.38
+
 a, b = map(int, input('1-20과 10-30인 정수 두개 입력').split(''))
 nn = [2 ** i for i in range(a, b + 1)] # 2를 i번 만큼 곱하기, (첫번째~두번째, +1 끝포함)
 del nn[1]
@@ -75,33 +63,26 @@ del nn[-2]
 print(nn)
 
 # %%
-# 21번 사용자에게 'Hello, world!' 입력 받음, Hello > Hi 바꿔 출력
-# p.3
+
 a = input('Hello, world! 입력')
 a = a.replace('Hello', 'hi')
 print(a)
 
 # %%
-# 22번 사용자에게 문자 4개 입력 받음, 각 문자를 / 붙여서 출력
-# p.6
+
 a = input('문자 4개 입력')
 a = " / ".join(a)
 print(a)
 
 # %%
-# 23번 본인 성 영어로 입력, 소문자로 바꿈, 길이 10으로 오른쪽 정렬 출력
-# p.7 p.10
+
 a = input('성씨 영문자 입력')
 b = a.lower()
 c = b.rjust(10)
 print(c)
 
 # %%
-# 24번 input 사용, 물품가격 여러개 문자열 한줄로 입력, 가격은 ;세미콜론으로 구분
-# input.split() 사용, 세미콜론으로 입력, list로 형변환
-# sort 사용, 내림차순 정렬
-# 반복문 돌면서 길이 9자리, 오른쪽 정렬 출력
-#p.25
+
 a = list(map(int, input('물품 가격 입력').split(';')))
 a.sort()
 for i in a:
