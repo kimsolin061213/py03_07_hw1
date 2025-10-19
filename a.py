@@ -17,8 +17,7 @@ for index, nn in enumerate(a, start = 101):
   print(index, nn)
 
 # %%
-# 14번 a=[10, 20, 30, 40, 30, 20, 10] 숫자 20의 개수
-# p.19
+
 a = [10, 20, 30, 40, 30, 20, 10]
 nn = a.count(20)
 print(nn)
